@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwind from '@tailwindcss/vite'
 
 export default defineConfig({
+  base: '/fractal-motif-viz/',
   plugins: [react(), tailwind()]
 })
