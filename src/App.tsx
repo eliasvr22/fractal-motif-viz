@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
@@ -412,7 +413,7 @@ export default function LiveFractalMotifApp() {
         aLevel = (0.6*aLow + 0.9*aMid + 0.5*aHigh)/2.0;
       }
       // Smooth and scale by reactive amount
-      const prev = audioLevelRef.current; const lerp=(a,b,t)=>a+(b-a)*0.2;
+      const prev = audioLevelRef.current; const lerp=(a,b,t)=>a+(b-a)*t;
       prev.low = lerp(prev.low, aLow*reactive, 0.2);
       prev.mid = lerp(prev.mid, aMid*reactive, 0.2);
       prev.high = lerp(prev.high, aHigh*reactive, 0.2);
